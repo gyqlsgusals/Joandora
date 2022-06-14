@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/* 초기화 */
+body, h1, h2, h3, p, ul { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { text-decoration: none;  }
+.hidden { position: absolute; left: -9999px; }
+
+/* 웹폰트 나눔고딕 */
+body {
+			 font-family: 'Nanum Gothic', sans-serif;
+			 background: linear-gradient(180deg, #87ceeb, #fff 800px) no-repeat; }
+
+/* 전체영역 */
+#wrap { width: 960px; margin: 8px auto 0;
+				border: 1px solid #e7e7e7; background: #fff; }
+
+/* 헤더 */
+#header { height: 279px;
+				  background: url(../images/bg_header.png) no-repeat; }
+#header h1 { color: #fffc00; font-size: 50px; font-weight: 800;
+						 padding: 40px 0 0 22px; }
+
+/* nav */
+#gnb ul { display: flex; height: 60px; }
+#gnb ul li { width: 25%; }
+#gnb ul li a { display: block; background: #006600; color: #fff;
+							 text-align: center; line-height: 60px; }
+
+/* 메인 */
+main { float: left; width: 740px; }
+
+/* content */
+#content { padding: 20px; }
+#content article h3 { margin: 25px 0; }
+#content article p { margin-bottom: 15px; }
+
+/* photo */
+#sidePhoto { width: 220px; background: #ddffdd; padding: 20px 10px 10px;
+						 float: right; box-sizing: border-box; }
+#sidePhoto img { border: 1px solid #ccc; }
+
+/* 푸터 */
+#footer { padding: 20px 0;
+					clear: both; text-align: center;
+					color: #fff; background: #061f1f;}
+
+/* 1023이하 600이상 */
+@media screen and (max-width: 1023px) {
+	#wrap { width: 580px; }
+	main { width: 100%; float: none;  }
+	#sidePhoto { width: 100%; float: none; text-align: center; }
+	#sidePhoto img { width: 176px; }
+}
+
+/* 599이하 */
+@media screen and (max-width: 599px) {
+	body { background: none; }
+	#wrap { width: 100%; margin: 0; border: 0; }
+	#header { height: 75px; background: #061f1f; }
+	#header h1 { padding: 10px 0 0 16px; font-size: 32px; }
+	#gnb {  }
+	#gnb ul { display: block; height: auto; padding: 14px 20px 0; }
+	#gnb ul li { width: auto; margin: 10px; }
+ 	#gnb ul li a { border: 1px solid #ccc; border-radius: 10px; background: #fff; color: #000; }
+	#sidePhoto { background: none; }
+	#sidePhoto img { width: 100%; }
+	#footer small { font-style: italic;}
+}
